@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="5dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/bg"
+            android:layout_alignStart="@+id/image"
+            android:layout_alignEnd="@+id/image"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#4DD0E1"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/plus"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:padding="8dp"
+                    android:src="@drawable/plus" />
+
+                <ImageView
+                    android:id="@+id/minus"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/minus"
+                    android:padding="8dp"/>
+
+                <ImageView
+                    android:id="@+id/buffer"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"/>
+
+                <ImageView
+                    android:id="@+id/del"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/del"
+                    android:padding="8dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/plus"
+                    android:layout_toRightOf="@id/buffer"
+                    android:background="#B6F2FA"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/del1"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/green"
+            android:text=" Delete"
+            android:gravity="center"
+            android:layout_below="@id/bg"
+            android:autoSizeTextType="uniform"
+            android:layout_alignParentRight="true"
+            android:elevation="16dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceSmall">
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/image"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="Product Name"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/image"
+            android:text="Price"
+            android:textAlignment="center"
+            android:textColor="#4DD0E1"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:elevation="1dp"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/bg"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:background="#FFFFFF" />
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

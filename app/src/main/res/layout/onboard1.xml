@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F48B94"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/splash"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        app:layout_constraintVertical_bias="0"
+        android:src="@drawable/splash2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/tw"
+        android:text="  Skip"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        tools:ignore="ContentDescription"
+        android:textColor="#FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceMedium">
+    </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+    <ImageView
+        android:id="@+id/indicator"
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:src="@drawable/tab1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/an1"
+        app:layout_constraintStart_toStartOf="@id/an1"
+        app:layout_constraintTop_toBottomOf="@id/tw3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.4"
+        app:tint="#FFFFFF"
+        tools:ignore="ContentDescription" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/an1"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:elevation="2dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/courier" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/an01"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="24dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/an1"
+        app:layout_constraintHorizontal_bias="0.783"
+        app:layout_constraintStart_toStartOf="@id/an1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:lottie_autoPlay="true"
+        app:lottie_colorFilter="@color/tw"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/courier" />
+
+    <TextView
+        android:id="@+id/tw1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="Delivered"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/an1"
+        app:layout_constraintTop_toBottomOf="@+id/an1" />
+
+    <TextView
+        android:id="@+id/tw2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Straight To"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/an1"
+        app:layout_constraintTop_toBottomOf="@+id/tw1" />
+
+    <TextView
+        android:id="@+id/tw3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="(more like 6 feet away from it)"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/an1"
+        app:layout_constraintTop_toBottomOf="@+id/tw4" />
+
+    <TextView
+        android:id="@+id/tw4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Your Doorstep"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/an1"
+        app:layout_constraintTop_toBottomOf="@+id/tw2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

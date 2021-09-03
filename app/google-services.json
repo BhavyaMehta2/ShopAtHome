@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "834485160120",
+    "firebase_url": "https://shopfromhome-880bf-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "shopfromhome-880bf",
+    "storage_bucket": "shopfromhome-880bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834485160120:android:85b550a074d593349f4c4d",
+        "android_client_info": {
+          "package_name": "com.project.shopathome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834485160120-okkbabievm3231s97avgpp1e0p1p9nsc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM5nwsTfswPO9lmakiN3FOKQGmNzWB7fQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834485160120-okkbabievm3231s97avgpp1e0p1p9nsc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834485160120:android:c3158982c3f3bab59f4c4d",
+        "android_client_info": {
+          "package_name": "com.project.shopfromhome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834485160120-201lpfqunrllqi39cnoro5jn895t0bl4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.shopfromhome",
+            "certificate_hash": "ee732d7395f4e5a724c8d46dcc460b27765b992b"
+          }
+        },
+        {
+          "client_id": "834485160120-okkbabievm3231s97avgpp1e0p1p9nsc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM5nwsTfswPO9lmakiN3FOKQGmNzWB7fQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834485160120-okkbabievm3231s97avgpp1e0p1p9nsc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

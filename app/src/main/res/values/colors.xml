@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main">#1d1e20</color>
+    <color name="ob">#8031FE</color>
+    <color name="ob2">#2E66F5</color>
+    <color name="ob3">#FA2B6D</color>
+    <color name="tw">#CC8031FE</color>
+    <color name="tw2">#CC2E66F5</color>
+    <color name="tw3">#CCFA2B6D</color>
+    <color name="mtrl_textinput_default_box_stroke_color">#fff</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue">#4DD0E1</color>
+    <color name="green">#268895</color>
+</resources>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductActivity"
+    android:background="#000000">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/imageview"
+        android:elevation="2dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="2dp">
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="25dp"
+            android:backgroundTint="#4DD0E1"
+            android:text=" Add to Cart"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            tools:ignore="ContentDescription"
+            android:elevation="16dp"
+            android:textColor="#1d1e20"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium">
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:elevation="2dp"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/cart" />
+        <TextView
+            android:id="@+id/tw"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="0"
+            android:autoSizeTextType="uniform"
+            android:elevation="6dp"
+            android:textColor="#000000"
+            android:gravity="center"
+            />
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/circle"
+            android:elevation="5dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/bg2"
+        app:layout_constraintTop_toBottomOf="@id/bg"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginBottom="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ScrollViewSize">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:elevation="2dp"
+                android:text="Name"
+                android:textColor="#D8CACA"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:elevation="2dp"
+                android:text="Price"
+                android:textColor="#4DD0E1"
+                android:textSize="50sp"
+                app:layout_constraintStart_toEndOf="@id/price1"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <TextView
+                android:id="@+id/price1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:elevation="2dp"
+                android:text="$"
+                android:textColor="#4DD0E1"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="@id/price"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/price" />
+
+            <TextView
+                android:id="@+id/desc1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:elevation="2dp"
+                android:text="Product Description"
+                android:textColor="#D8CACA"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/price" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:elevation="2dp"
+                android:text="Description"
+                android:textColor="#D8CACA"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/desc1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        app:layout_constraintDimensionRatio="1:0.8"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@+id/bg"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:elevation="2dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@+id/bg"
+        app:layout_constraintTop_toTopOf="@+id/bg"
+        app:layout_constraintVertical_bias="0.300"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <RatingBar
+        android:id="@+id/rate"
+        android:elevation="3dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        style = "?android:attr/ratingBarStyleSmall"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/count"
+        android:stepSize="0.01"
+        android:progressTint="@color/blue"
+        android:progressBackgroundTint="#9C8C8C"
+        android:isIndicator="true"/>
+
+    <TextView
+        android:id="@+id/count"
+        android:elevation="3dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_toRightOf="@id/rate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/rate"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:autoSizeTextType="uniform"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/bg2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/imageview"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#1d1e20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
