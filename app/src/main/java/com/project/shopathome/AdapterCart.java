@@ -83,7 +83,6 @@ public class AdapterCart extends RecyclerView.Adapter<AdapterCart.Viewholder> {
             HomeActivity.anim1.playAnimation();
             HomeActivity.anim1.setMinFrame(20);
             HomeActivity.anim1.setMaxFrame(28);
-            //SecondFragment.adapter.notifyDataSetChanged();
 
             final Handler handler = new Handler();
             handler.postDelayed(() -> HomeActivity.anim1.pauseAnimation(), 500);
@@ -124,6 +123,10 @@ public class AdapterCart extends RecyclerView.Adapter<AdapterCart.Viewholder> {
             SecondFragment.recycle.removeViewAt(position);
             SecondFragment.adapter.notifyItemRemoved(position);
             SecondFragment.adapter.notifyItemRangeChanged(position, SecondFragment.List.size());
+            if(SecondFragment.List.size()==0)
+            {
+                SecondFragment.anim.setVisibility(View.VISIBLE);
+            }
         });
 
         holder.del1.setOnClickListener(v -> {
@@ -139,12 +142,14 @@ public class AdapterCart extends RecyclerView.Adapter<AdapterCart.Viewholder> {
             holder.Count.setText(String.valueOf(holder.count));
             HomeActivity.twc.setText(String.valueOf(total));
 
-
-
             SecondFragment.List.remove(position);
             SecondFragment.recycle.removeViewAt(position);
             SecondFragment.adapter.notifyItemRemoved(position);
             SecondFragment.adapter.notifyItemRangeChanged(position, SecondFragment.List.size());
+            if(SecondFragment.List.size()==0)
+            {
+                SecondFragment.anim.setVisibility(View.VISIBLE);
+            }
         });
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -183,7 +188,6 @@ public class AdapterCart extends RecyclerView.Adapter<AdapterCart.Viewholder> {
             Name = itemView.findViewById(R.id.name);
             Price = itemView.findViewById(R.id.price);
             Count = itemView.findViewById(R.id.count);
-
         }
     }
 }

@@ -3,11 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".SecondFragment">
+    tools:context=".ThirdFragment">
+
+    <TextView
+        android:id="@+id/check"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:elevation="10dp"
+        android:textColor="@color/white"
+        />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
+        android:layout_below="@id/check"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_height="match_parent"
@@ -15,28 +24,13 @@
         app:layout_constraintVertical_bias="0.0"
         android:layout_marginBottom="10dp">
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/animationView"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/viewt3"
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:elevation="2dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/empty" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/view"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>

@@ -5,9 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -33,7 +30,7 @@ public class NameAddActivity extends AppCompatActivity {
         pin = findViewById(R.id.editText4);
         city = findViewById(R.id.editText5);
 
-        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("pref", MODE_PRIVATE);
         SharedPreferences.Editor editor=prefs.edit();
         String name1 = prefs.getString("Name", null);
 

@@ -11,7 +11,7 @@ public class Model {
     private int ID;
     private double rate;
     private int count;
-    // Constructor
+
     public Model(int ID, String name, URL image, String price, String category, String desc, Results.rating Rate) {
         this.name = name;
         this.image = image;
@@ -23,7 +23,6 @@ public class Model {
         this.count = Rate.count;
     }
 
-    // Getter and Setter
     public int getID() {
         return ID;
     }

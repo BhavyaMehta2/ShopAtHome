@@ -33,7 +33,7 @@ public class CheckoutActivity extends AppCompatActivity {
         pin = findViewById(R.id.editText4);
         city = findViewById(R.id.editText5);
 
-        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("pref", MODE_PRIVATE);
         SharedPreferences.Editor editor=prefs.edit();
 
         name.getEditText().setText(prefs.getString("Name", null));
@@ -88,9 +88,8 @@ public class CheckoutActivity extends AppCompatActivity {
                 editor.putString("State", text);
                 editor.apply();
 
-                Intent intent = new Intent(CheckoutActivity.this, HomeActivity.class);
+                Intent intent = new Intent(CheckoutActivity.this, PayActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 

@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -31,7 +32,7 @@ public class HomeActivity extends AppCompatActivity {
     static CardView all, men, women, electronics, jewelery;
     private TextView allT, menT, womenT, electronicsT, jeweleryT, sub;
     private ImageView bg;
-    private ExtendedFloatingActionButton checkout;
+    static ExtendedFloatingActionButton checkout;
     FragmentManager fm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,11 +70,8 @@ public class HomeActivity extends AppCompatActivity {
         window.setStatusBarColor(getResources().getColor(R.color.blue, HomeActivity.this.getTheme()));
 
         SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
-        String name1 = prefs.getString("Name", null);
+        SharedPreferences.Editor spEditor = prefs.edit();
         int total = prefs.getInt("Total", 0);
-        String[] n =name1.split(" ");
-        n[0]="Hello, "+n[0];
-        //tw.setText(n[0]);
         twc.setText(String.valueOf(total));
 
         loadFragment(new FirstFragment());
@@ -162,8 +160,16 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         checkout.setOnClickListener(v -> {
-            Intent intent = new Intent(HomeActivity.this, CheckoutActivity.class);
-            startActivity(intent);
+            if(SecondFragment.List.size()==0)
+            {
+                Toast.makeText(HomeActivity.this, "Cart Is Empty", Toast.LENGTH_SHORT).show();
+            }
+            else {
+                Intent intent = new Intent(HomeActivity.this, CheckoutActivity.class);
+                spEditor.putString("Cart", String.valueOf(tot.getText()));
+                spEditor.apply();
+                startActivity(intent);
+            }
         });
 
         anim.setOnClickListener(v -> {
@@ -242,7 +248,7 @@ public class HomeActivity extends AppCompatActivity {
             resetChoice();
             anim2.playAnimation();
 
-            //loadFragment(new ThirdFragment());
+            loadFragment(new ThirdFragment());
             checkout.animate().translationX(2000).setDuration(1000);
             sub.animate().translationX(2000).setDuration(1000);
             tot.animate().translationX(2000).setDuration(1000);
@@ -259,7 +265,6 @@ public class HomeActivity extends AppCompatActivity {
             select.animate().translationY(-1000).setDuration(1000);
             select1.animate().translationY(-1000).setDuration(1000);
             select2.animate().translationY(0).setDuration(1000);
-
 
             bg.animate().translationY(-1000).setDuration(1000);
 

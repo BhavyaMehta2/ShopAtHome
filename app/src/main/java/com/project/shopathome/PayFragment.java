@@ -14,8 +14,6 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.airbnb.lottie.LottieAnimationView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,24 +21,21 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class SecondFragment extends Fragment {
+public class PayFragment extends Fragment {
 
     View view;
     int total;
     static RecyclerView recycle;
-    static AdapterCart adapter;
+    static AdapterOrder adapter;
     static ArrayList<Model> List;
-    static LottieAnimationView anim;
 
     static SharedPreferences spInstance;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_second, container, false);
+        view = inflater.inflate(R.layout.fragment_pay, container, false);
         recycle= view.findViewById(R.id.view);
-        anim= view.findViewById(R.id.animationView);
-        anim.setVisibility(View.GONE);
 
         spInstance = this.getActivity().getSharedPreferences("prefs", Context.MODE_PRIVATE);
         total = spInstance.getInt("Total", 0);
@@ -68,15 +63,7 @@ public class SecondFragment extends Fragment {
                     }
                 }
 
-                if(List.size()==0)
-                {
-                    anim.setVisibility(View.VISIBLE);
-                }
-                else
-                {
-                    anim.setVisibility(View.GONE);
-                }
-                adapter = new AdapterCart(getActivity(), List);
+                adapter = new AdapterOrder(getActivity(), List);
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
                 recycle.setLayoutManager(linearLayoutManager);
                 recycle.setAdapter(adapter);
