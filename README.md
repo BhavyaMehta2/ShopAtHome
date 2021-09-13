@@ -1,5 +1,6 @@
 # ShopAtHome
 DevSoc AppD Review Project
+<img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/01.jpg" width="100" height="100">
 ![alt text](https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/01.jpg?raw=true)
 ![alt text](https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/02.jpg?raw=true)
 ![alt text](https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/03.jpg?raw=true)
