@@ -4,45 +4,236 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProductActivity"
-    android:background="#000000">
+    android:background="#000000"
+    tools:context=".ProductActivity">
+
+    <ImageView
+        android:id="@+id/tint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:elevation="19dp"
+        android:visibility="gone" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#494949"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/re"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="Re-Authenticate To Proceed"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/blue"
+                app:layout_constraintTop_toBottomOf="@id/re"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pass"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:elevation="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintTop_toBottomOf="@id/email"
+                android:focusable="true"
+                android:textColorHint="#FFFFFF"
+                app:boxStrokeColor="#FFFFFF"
+                app:boxStrokeErrorColor="#FFFFFF"
+                app:errorTextColor="#FFFFFF"
+                app:hintTextColor="#FFFFFF"
+                android:hint="@string/password"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="#FFFFFF"
+                    android:textCursorDrawable="@null" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="This action is irreversible. Enter"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/pass"/>
+
+            <TextView
+                android:id="@+id/line2"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="to confirm."
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/conf"/>
+
+            <TextView
+                android:id="@+id/conf"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="&quot;Delete My Account&quot;"
+                android:textColor="#EE4B2B"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/line1"/>
+
+            <TextView
+                android:id="@+id/close"
+                android:layout_width="56dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="7dp"
+                android:autoSizeTextType="uniform"
+                android:clickable="true"
+                android:text="Close"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/delconf" />
+
+            <TextView
+                android:id="@+id/delconf"
+                android:layout_width="76dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="7dp"
+                android:autoSizeTextType="uniform"
+                android:clickable="true"
+                android:text="Confirm"
+                android:textColor="#EE4B2B"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/close"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fcheck"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:focusable="true"
+                android:textColorHint="#FFFFFF"
+                app:boxStrokeColor="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#3343A7"
+                    android:textCursorDrawable="@null" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="22dp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="@color/green"
+        android:gravity="center"
+        android:text="Sign Out"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/bg"
+        app:layout_constraintTop_toBottomOf="@id/search" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/checkout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginBottom="3dp"
-        android:text="Checkout"
         android:autoSizeTextType="uniform"
         android:backgroundTint="@color/green"
-        android:textColor="@color/white"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="@id/text"
-        />
+        android:text="Checkout"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/text" />
 
     <TextView
         android:id="@+id/sub"
         android:layout_width="0dp"
         android:layout_height="25dp"
-        android:layout_marginBottom="10dp"
         android:layout_marginRight="5dp"
+        android:autoSizeTextType="uniform"
+        android:elevation="10dp"
         android:text="Subtotal:"
         android:textColor="#000000"
-        android:elevation="10dp"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintStart_toStartOf="@id/checkout"
-        app:layout_constraintEnd_toStartOf="@id/men"
         app:layout_constraintBottom_toTopOf="@id/checkout"
-        />
+        app:layout_constraintEnd_toStartOf="@id/men"
+        app:layout_constraintStart_toStartOf="@id/checkout"
+        app:layout_constraintTop_toBottomOf="@id/search" />
 
     <TextView
         android:id="@+id/total"
         android:layout_width="0dp"
         android:layout_height="25dp"
-        android:layout_marginBottom="10dp"
         android:autoSizeTextType="uniform"
         android:elevation="10dp"
         android:text="$0.00"
@@ -50,12 +241,56 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/checkout"
         app:layout_constraintEnd_toEndOf="@+id/bg2"
-        app:layout_constraintStart_toStartOf="@id/men" />
+        app:layout_constraintStart_toStartOf="@id/men"
+        app:layout_constraintTop_toBottomOf="@id/search" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/search"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="10dp"
+        android:focusable="true"
+        android:hint="What Would You Like To Buy?"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxStrokeColor="#FFFFFF"
+        app:boxStrokeErrorColor="#FFFFFF"
+        app:endIconMode="clear_text"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@id/jewelery"
+        app:layout_constraintStart_toStartOf="@id/all"
+        app:layout_constraintTop_toBottomOf="@+id/check">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColorHighlight="#3343A7"
+            android:textCursorDrawable="@null" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/search1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded"
+        android:clickable="true"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:src="@drawable/search"
+        app:layout_constraintBottom_toBottomOf="@id/search"
+        app:layout_constraintEnd_toEndOf="@id/jewelery"
+        app:layout_constraintStart_toEndOf="@id/search"
+        app:layout_constraintTop_toTopOf="@id/search" />
 
     <ImageView
         android:id="@+id/bg"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="200dp"
         android:background="@drawable/imageview"
         android:backgroundTint="#4DD0E1"
         android:elevation="5dp"
@@ -67,16 +302,16 @@
         android:id="@+id/all"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginBottom="0dp"
         app:cardBackgroundColor="#1d1e20"
-        app:layout_constraintTop_toBottomOf="@id/check"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toTopOf="@+id/text"
         app:layout_constraintEnd_toStartOf="@id/men"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -92,183 +327,174 @@
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/all"
-        app:layout_constraintBottom_toBottomOf="@id/bg"
-        app:layout_constraintStart_toStartOf="@id/all"
-        app:layout_constraintEnd_toEndOf="@id/all"
+        android:elevation="10dp"
         android:text="All"
+        android:textColor="#1d1e20"
         android:textSize="11sp"
         android:textStyle="bold"
-        android:textColor="#1d1e20"
-        android:elevation="10dp"
-        />
+        app:layout_constraintBottom_toBottomOf="@id/bg"
+        app:layout_constraintEnd_toEndOf="@id/all"
+        app:layout_constraintStart_toStartOf="@id/all"
+        app:layout_constraintTop_toBottomOf="@id/all" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/men"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:cardElevation="10dp"
-        android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginBottom="0dp"
-        app:layout_constraintTop_toBottomOf="@id/check"
-        app:layout_constraintBottom_toTopOf="@id/text1"
-        app:layout_constraintStart_toEndOf="@id/all"
-        app:layout_constraintEnd_toStartOf="@id/women"
         app:cardBackgroundColor="#1d1e20"
         app:cardCornerRadius="10dp"
-        >
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toTopOf="@id/text1"
+        app:layout_constraintEnd_toStartOf="@id/women"
+        app:layout_constraintStart_toEndOf="@id/all"
+        app:layout_constraintTop_toBottomOf="@id/search">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:elevation="5dp"
             android:layout_gravity="center"
+            android:elevation="5dp"
+            android:padding="10dp"
             android:src="@drawable/men"
-            app:tint="@color/white"
-            />
+            app:tint="@color/white" />
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/all"
-        app:layout_constraintBottom_toBottomOf="@id/bg"
-        app:layout_constraintStart_toStartOf="@id/men"
-        app:layout_constraintEnd_toEndOf="@id/men"
+        android:elevation="10dp"
         android:text="Men"
+        android:textColor="#1d1e20"
         android:textSize="11sp"
         android:textStyle="bold"
-        android:textColor="#1d1e20"
-        android:elevation="10dp"
-        />
+        app:layout_constraintBottom_toBottomOf="@id/bg"
+        app:layout_constraintEnd_toEndOf="@id/men"
+        app:layout_constraintStart_toStartOf="@id/men"
+        app:layout_constraintTop_toBottomOf="@id/all" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/women"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:cardElevation="10dp"
-        android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginBottom="0dp"
-        app:layout_constraintTop_toBottomOf="@id/check"
-        app:layout_constraintBottom_toTopOf="@id/text2"
-        app:layout_constraintStart_toEndOf="@id/men"
-        app:layout_constraintEnd_toStartOf="@id/electronic"
         app:cardBackgroundColor="#1d1e20"
         app:cardCornerRadius="10dp"
-        >
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toTopOf="@id/text2"
+        app:layout_constraintEnd_toStartOf="@id/electronic"
+        app:layout_constraintStart_toEndOf="@id/men"
+        app:layout_constraintTop_toBottomOf="@id/search">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:elevation="5dp"
             android:layout_gravity="center"
+            android:elevation="5dp"
+            android:padding="10dp"
             android:src="@drawable/women"
-            app:tint="@color/white"
-            />
+            app:tint="@color/white" />
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginBottom="0dp"
-        app:layout_constraintTop_toBottomOf="@id/all"
-        app:layout_constraintBottom_toBottomOf="@id/bg"
-        app:layout_constraintStart_toStartOf="@id/women"
-        app:layout_constraintEnd_toEndOf="@id/women"
-        android:textSize="11sp"
-        android:text="Women"
-        android:textStyle="bold"
-        android:textColor="#1d1e20"
         android:elevation="10dp"
-        />
+        android:text="Women"
+        android:textColor="#1d1e20"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/bg"
+        app:layout_constraintEnd_toEndOf="@id/women"
+        app:layout_constraintStart_toStartOf="@id/women"
+        app:layout_constraintTop_toBottomOf="@id/all" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/electronic"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:cardElevation="10dp"
-        android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginBottom="0dp"
-        app:layout_constraintTop_toBottomOf="@id/check"
-        app:layout_constraintBottom_toTopOf="@id/text3"
-        app:layout_constraintStart_toEndOf="@id/women"
-        app:layout_constraintEnd_toStartOf="@id/jewelery"
         app:cardBackgroundColor="#1d1e20"
         app:cardCornerRadius="10dp"
-        >
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toTopOf="@id/text3"
+        app:layout_constraintEnd_toStartOf="@id/jewelery"
+        app:layout_constraintStart_toEndOf="@id/women"
+        app:layout_constraintTop_toBottomOf="@id/search">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:elevation="5dp"
             android:layout_gravity="center"
+            android:elevation="5dp"
+            android:padding="10dp"
             android:src="@drawable/electronic"
-            app:tint="@color/white"
-            />
+            app:tint="@color/white" />
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/text3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/all"
-        app:layout_constraintBottom_toBottomOf="@id/bg"
-        app:layout_constraintStart_toStartOf="@id/electronic"
-        app:layout_constraintEnd_toEndOf="@id/electronic"
-        android:textSize="11sp"
-        android:text="Electronics"
-        android:textStyle="bold"
-        android:textColor="#1d1e20"
         android:elevation="10dp"
-        />
+        android:text="Electronics"
+        android:textColor="#1d1e20"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/bg"
+        app:layout_constraintEnd_toEndOf="@id/electronic"
+        app:layout_constraintStart_toStartOf="@id/electronic"
+        app:layout_constraintTop_toBottomOf="@id/all" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/jewelery"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginBottom="0dp"
+        app:cardBackgroundColor="#1d1e20"
+        app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
         app:layout_constraintBottom_toTopOf="@id/text4"
-        app:layout_constraintStart_toEndOf="@id/electronic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:cardBackgroundColor="#1d1e20"
-        app:layout_constraintTop_toBottomOf="@id/check"
-        app:cardCornerRadius="10dp"
-        >
+        app:layout_constraintStart_toEndOf="@id/electronic"
+        app:layout_constraintTop_toBottomOf="@id/search">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:elevation="5dp"
             android:layout_gravity="center"
+            android:elevation="5dp"
+            android:padding="10dp"
             android:src="@drawable/diamond"
-            app:tint="@color/white"
-            />
+            app:tint="@color/white" />
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/text4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/bg"
-        app:layout_constraintStart_toStartOf="@id/jewelery"
-        app:layout_constraintEnd_toEndOf="@id/jewelery"
-        app:layout_constraintTop_toBottomOf="@id/all"
-        android:textSize="11sp"
-        android:text="Jewelery"
-        android:textStyle="bold"
-        android:textColor="#1d1e20"
         android:elevation="10dp"
-        />
+        android:text="Jewelery"
+        android:textColor="#1d1e20"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/bg"
+        app:layout_constraintEnd_toEndOf="@id/jewelery"
+        app:layout_constraintStart_toStartOf="@id/jewelery"
+        app:layout_constraintTop_toBottomOf="@id/all" />
 
     <ImageView
         android:id="@+id/bg2"
@@ -285,27 +511,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/check"
         android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="10dp"
-        android:padding="10dp"
-        android:src="@drawable/logo"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/imageview"
         android:backgroundTint="#4DD0E1"
-        android:elevation="5dp"/>
+        android:elevation="5dp"
+        android:padding="5dp"
+        android:src="@drawable/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_height="100dp"
         android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bg2"
         app:layout_constraintEnd_toEndOf="parent"
-        android:elevation="2dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg2">
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/animationView"
@@ -322,8 +548,8 @@
             android:id="@+id/animationView1"
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:padding="20dp"
             android:elevation="2dp"
+            android:padding="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:lottie_autoPlay="false"
             app:lottie_loop="true"
@@ -333,8 +559,8 @@
             android:id="@+id/animationView2"
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:padding="15dp"
             android:elevation="2dp"
+            android:padding="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:lottie_autoPlay="false"
             app:lottie_loop="true"
@@ -344,16 +570,16 @@
             android:id="@+id/twc"
             android:layout_width="21dp"
             android:layout_height="21dp"
-            app:layout_constraintVertical_bias="0.5"
-            android:elevation="6dp"
             android:autoSizeTextType="uniform"
+            android:elevation="6dp"
             android:gravity="center"
             android:text="0"
             android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="@id/imageView"
             app:layout_constraintEnd_toEndOf="@id/imageView"
             app:layout_constraintStart_toStartOf="@id/imageView"
             app:layout_constraintTop_toTopOf="@id/imageView"
-            app:layout_constraintBottom_toBottomOf="@id/imageView"/>
+            app:layout_constraintVertical_bias="0.5" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -372,51 +598,50 @@
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="@id/bg2"
-        app:layout_constraintTop_toBottomOf="@id/bg"
-        android:elevation="10dp">
-    </FrameLayout>
+        app:layout_constraintTop_toBottomOf="@id/bg"></FrameLayout>
 
     <ImageView
         android:id="@+id/select"
         android:layout_width="100dp"
         android:layout_height="match_parent"
-        android:padding="20dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="87dp"
         android:background="@drawable/imageview"
         android:backgroundTint="#664DD0E1"
+        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginBottom="87dp"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/select1"
         android:layout_width="100dp"
         android:layout_height="match_parent"
-        android:padding="20dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="87dp"
         android:background="@drawable/imageview"
         android:backgroundTint="#664DD0E1"
+        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="87dp"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/select2"
         android:layout_width="100dp"
         android:layout_height="match_parent"
-        android:padding="20dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="87dp"
         android:background="@drawable/imageview"
         android:backgroundTint="#664DD0E1"
+        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="87dp"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

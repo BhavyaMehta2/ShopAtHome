@@ -19,8 +19,6 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 public class AdapterOrder extends RecyclerView.Adapter<AdapterOrder.Viewholder>{
-    static int total;
-    static double Cost;
 
     private Context context;
     private ArrayList<Model> courseModelArrayList;

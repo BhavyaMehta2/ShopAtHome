@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -27,6 +28,7 @@ public class SecondFragment extends Fragment {
 
     View view;
     int total;
+    static TextView tw;
     static RecyclerView recycle;
     static AdapterCart adapter;
     static ArrayList<Model> List;
@@ -41,6 +43,7 @@ public class SecondFragment extends Fragment {
         recycle= view.findViewById(R.id.view);
         anim= view.findViewById(R.id.animationView);
         anim.setVisibility(View.GONE);
+        tw = view.findViewById(R.id.tw);
 
         spInstance = this.getActivity().getSharedPreferences("prefs", Context.MODE_PRIVATE);
         total = spInstance.getInt("Total", 0);
@@ -70,10 +73,12 @@ public class SecondFragment extends Fragment {
 
                 if(List.size()==0)
                 {
+                    tw.setText("Your cart is empty ＞﹏＜");
                     anim.setVisibility(View.VISIBLE);
                 }
                 else
                 {
+                    tw.setText("");
                     anim.setVisibility(View.GONE);
                 }
                 adapter = new AdapterCart(getActivity(), List);

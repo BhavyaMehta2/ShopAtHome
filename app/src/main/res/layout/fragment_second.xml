@@ -28,6 +28,7 @@
             app:layout_constraintVertical_bias="0.5"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
+            android:visibility="invisible"
             app:lottie_rawRes="@raw/empty" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -38,5 +39,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tw"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="100dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>

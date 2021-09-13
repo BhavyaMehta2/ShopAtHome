@@ -2,6 +2,8 @@ package com.project.shopathome;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.TextView;
@@ -66,14 +68,8 @@ public class MainActivity extends AppCompatActivity {
                             if (!task.isSuccessful()) {
                                 try {
                                     throw task.getException();
-                                } catch(FirebaseAuthWeakPasswordException e) {
-                                   pass.setError("Weak Password");
-                                    pass.requestFocus();
                                 } catch(FirebaseAuthInvalidCredentialsException e) {
-                                    user.setError("Invalid email");
-                                    user.requestFocus();
-                                } catch(FirebaseAuthUserCollisionException e) {
-                                    user.setError("Check");
+                                    user.setError("Invalid username/password");
                                     user.requestFocus();
                                 } catch(Exception e) {
                                     Toast.makeText(MainActivity.this, "Authentication failed." + task.getException(), Toast.LENGTH_SHORT).show();
@@ -87,9 +83,21 @@ public class MainActivity extends AppCompatActivity {
                         });
             });
         }
+    boolean PressedOnce = false;
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        System.exit(0);
+        if (this.PressedOnce) {
+            finishAffinity();
+            System.exit(0);
+        }
+        Toast.makeText(MainActivity.this, "Press Back Again To Exit", Toast.LENGTH_SHORT).show();
+        this.PressedOnce = true;
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                PressedOnce = false;
+            }
+        }, 2000);
     }
 }

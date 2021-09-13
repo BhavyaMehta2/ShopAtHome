@@ -1,36 +1,154 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ThirdFragment">
 
-    <TextView
-        android:id="@+id/check"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:elevation="10dp"
-        android:textColor="@color/white"
-        />
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_below="@id/check"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_height="match_parent"
         android:elevation="2dp"
-        app:layout_constraintVertical_bias="0.0"
-        android:layout_marginBottom="10dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/viewt3"
-            app:layout_constraintTop_toTopOf="parent"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</RelativeLayout>
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/rp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:autoSizeTextType="uniform"
+                android:backgroundTint="@color/blue"
+                android:gravity="center"
+                android:text="Reset Password"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/delete"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:autoSizeTextType="uniform"
+                android:backgroundTint="@color/blue"
+                android:gravity="center"
+                android:text="Delete Your Account"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/rp" />
+
+            <TextView
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="25dp"
+                android:autoSizeTextType="uniform"
+                android:text="Contact Us:"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/logo"
+                app:layout_constraintTop_toBottomOf="@id/delete" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:autoSizeTextType="uniform"
+                android:text="Shop@Home"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/logo" />
+
+            <ImageView
+                android:id="@+id/p"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/phone"
+                app:layout_constraintStart_toStartOf="@id/logo"
+                app:layout_constraintTop_toBottomOf="@id/name" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="70dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:autoSizeTextType="uniform"
+                android:clickable="true"
+                android:text="Phone"
+                android:textColor="@color/blue"
+                app:layout_constraintBottom_toBottomOf="@id/p"
+                app:layout_constraintStart_toEndOf="@id/p"
+                app:layout_constraintTop_toTopOf="@id/p" />
+
+            <ImageView
+                android:id="@+id/m"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/mail"
+                app:layout_constraintStart_toStartOf="@id/logo"
+                app:layout_constraintTop_toBottomOf="@id/p" />
+
+            <TextView
+                android:id="@+id/mail"
+                android:layout_width="70dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:autoSizeTextType="uniform"
+                android:clickable="true"
+                android:text="E-Mail"
+                android:textColor="@color/blue"
+                app:layout_constraintBottom_toBottomOf="@id/m"
+                app:layout_constraintStart_toEndOf="@id/m"
+                app:layout_constraintTop_toTopOf="@id/m" />
+
+            <ImageView
+                android:id="@+id/w"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/whatsapp"
+                app:layout_constraintStart_toStartOf="@id/logo"
+                app:layout_constraintTop_toBottomOf="@id/m" />
+
+            <TextView
+                android:id="@+id/whatsapp"
+                android:layout_width="110dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:autoSizeTextType="uniform"
+                android:clickable="true"
+                android:text="WhatsApp"
+                android:textColor="@color/blue"
+                app:layout_constraintBottom_toBottomOf="@id/w"
+                app:layout_constraintStart_toEndOf="@id/w"
+                app:layout_constraintTop_toTopOf="@id/w" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toTopOf="@id/name"
+                app:layout_constraintTop_toBottomOf="@id/contact"
+                app:tint="@color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

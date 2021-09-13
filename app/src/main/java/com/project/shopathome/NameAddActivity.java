@@ -69,7 +69,7 @@ public class NameAddActivity extends AppCompatActivity {
             if(text.equalsIgnoreCase("Select your state"))
                 ((TextView) spinner.getSelectedView()).setError("");
 
-            if(!(names.isEmpty()||address.isEmpty()||pincode.isEmpty()||citys.isEmpty()||text.equalsIgnoreCase("Select your state"))) {
+            if(!(pincode.length()<6||names.isEmpty()||address.isEmpty()||pincode.isEmpty()||citys.isEmpty()||text.equalsIgnoreCase("Select your state"))) {
                 editor.putString("Name", names);
                 editor.putString("Address", address);
                 editor.putString("Landmark", landmark);

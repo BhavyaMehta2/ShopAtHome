@@ -126,6 +126,7 @@ public class AdapterCart extends RecyclerView.Adapter<AdapterCart.Viewholder> {
             if(SecondFragment.List.size()==0)
             {
                 SecondFragment.anim.setVisibility(View.VISIBLE);
+                SecondFragment.tw.setText("Your cart is empty ＞﹏＜");
             }
         });
 
@@ -149,6 +150,7 @@ public class AdapterCart extends RecyclerView.Adapter<AdapterCart.Viewholder> {
             if(SecondFragment.List.size()==0)
             {
                 SecondFragment.anim.setVisibility(View.VISIBLE);
+                SecondFragment.tw.setText("Your cart is empty ＞﹏＜");
             }
         });
 

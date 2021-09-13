@@ -48,7 +48,7 @@ public class FirstFragment extends Fragment {
         recycle1.addItemDecoration(new DotsIndicatorDecoration(10, 10 * 4, 30, getResources().getColor(R.color.blue), getResources().getColor(R.color.blue)));
 
         tw1.setOnClickListener(v -> {
-            loadFragment(new ViewFragment(0));
+            loadFragment(new ViewFragment(0, new String[1]));
             HomeActivity.all.setCardBackgroundColor(ContextCompat.getColor(getActivity(), R.color.green));
         });
 
