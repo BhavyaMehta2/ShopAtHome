@@ -2,8 +2,7 @@
 DevSoc AppD Review Project
 
 ## Appetize Link ##
-APK Fails To Upload :sob:
-[APK File](https://drive.google.com/file/d/1LIWcnqSrxxFj--nFHthPDmLe-2rlF0ik/view?usp=sharing)
+[APK](https://drive.google.com/file/d/1LIWcnqSrxxFj--nFHthPDmLe-2rlF0ik/view?usp=sharing) Fails To Upload :sob:
 
 ## List Of Things That I Learnt ##
 * FireBase Authentication (Didn't get to try this out during the last project because COVID)
@@ -18,7 +17,7 @@ APK Fails To Upload :sob:
 * Implementing Retrofit with Picasso(for images)
 * Primitive way to search for a product
 * Intents to launch Phone, Mail and WhatsApp with contact details
-* 
+
 ## Onboarding ##
 <img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/01.jpg" width="216" height="480">      <img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/02.jpg" width="216" height="480">     <img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/03.jpg" width="216" height="480">
 
