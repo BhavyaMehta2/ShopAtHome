@@ -19,7 +19,6 @@ DevSoc AppD Review Project
 * Intents to launch Phone, Mail and WhatsApp with contact details
 
 ## Onboarding ##
-![Imgur Image](http://i.imgur.com/zTONrOD.jpg)
 <img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/01.jpg" height="480">      <img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/02.jpg" width="216" height="480">     <img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/03.jpg" width="216" height="480">
 
 ## UI/UX ##
