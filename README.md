@@ -19,7 +19,7 @@ DevSoc AppD Review Project
 * Intents to launch Phone, Mail and WhatsApp with contact details
 
 ## Onboarding ##
-<img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/01.jpg" width="216" height="480">      <img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/02.jpg" width="216" height="480">     <img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/03.jpg" width="216" height="480">
+<img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/01.jpg" height="480">      <img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/02.jpg" width="216" height="480">     <img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/03.jpg" width="216" height="480">
 
 ## UI/UX ##
 <img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/05.jpg" width="216" height="480">      <img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/06.jpg" width="216" height="480">      <img src="https://github.com/BhavyaMehta2/ShopAtHome/blob/master/app/Screenshots/07.jpg" width="216" height="480">  
